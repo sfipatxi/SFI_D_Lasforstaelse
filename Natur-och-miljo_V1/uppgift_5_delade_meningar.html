@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Uppgift 5</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);min-height:100vh;padding:20px}.container{max-width:900px;margin:0 auto;background:white;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1);padding:40px}h1{color:#2c3e50;font-size:28px;margin-bottom:10px}.subtitle{color:#7f8c8d;font-size:16px;margin-bottom:30px}.matching-item{margin-bottom:25px;padding:20px;background:#f9fafb;border-radius:8px;border:1px solid #e1e8ed}.matching-item h3{color:#2c3e50;font-size:16px;margin-bottom:15px}.sentence-part{background:#ecf0f1;border-left:4px solid #3498db;padding:12px;margin-bottom:15px;border-radius:3px;font-style:italic;color:#2c3e50;font-size:16px}.option{margin-bottom:10px;margin-left:20px}.option label{display:flex;cursor:pointer;padding:8px;border-radius:5px}.option label:hover:not(.disabled){background-color:#ecf0f1}.option input{margin-right:10px;cursor:pointer}.option input:disabled{cursor:not-allowed;opacity:.7}.option-text{color:#2c3e50;font-size:16px}.feedback{margin-top:12px;padding:10px;border-radius:5px;display:none;font-weight:500;font-size:16px;font-size:14px}.feedback.show{display:block}.feedback.correct{background-color:#d5f4e6;color:#27ae60;border-left:4px solid #27ae60}.feedback.incorrect{background-color:#fadbd8;color:#c0392b;border-left:4px solid #c0392b}.btn-submit{background-color:#27ae60;color:white;padding:12px 30px;border:none;border-radius:5px;cursor:pointer;font-size:16px;margin-top:20px;width:100%;box-sizing:border-box}.btn-submit:hover:not(:disabled){background-color:#229954}.btn-submit:disabled{background-color:#bdc3c7}.result-summary{margin-top:40px;padding:20px;background:#d5f4e6;border-radius:8px;text-align:center;display:none}.result-summary.show{display:block}.result-summary h2{color:#27ae60}.nav-container{display:flex;gap:15px;justify-content:space-between;margin-top:30px}.btn-nav{background-color:#3498db;color:white;padding:12px 20px;border:none;border-radius:5px;cursor:pointer;font-size:16px;text-decoration:none;display:inline-block}.btn-nav:hover{background-color:#2980b9}</style></head><body><div class="container"><h1>Uppgift 5 - Delade meningar</h1><p class="subtitle">Välj rätt slut för varje mening.</p><form id="sentenceForm"><div class="matching-item"><h3>A. Att välja lokala produkter betyder att du...</h3><div class="sentence-part">Att välja lokala produkter betyder att du...</div><div class="option"><label><input type="radio" name="q1" value="1"><span class="option-text">...minskar långväga transporter och stödjer närsamhällets ekonomi.</span></label></div><div class="option"><label><input type="radio" name="q1" value="2"><span class="option-text">...slipper köpa dyra ekologiska produkter.</span></label></div><div class="option"><label><input type="radio" name="q1" value="3"><span class="option-text">...tvingar butiker att höja priserna.</span></label></div><div class="feedback" id="feedback1"></div></div><div class="matching-item"><h3>B. Att leva mer hållbart behöver inte kosta mycket om man...</h3><div class="sentence-part">Att leva mer hållbart behöver inte kosta mycket om man...</div><div class="option"><label><input type="radio" name="q2" value="1"><span class="option-text">...reparerar saker och köper secondhand.</span></label></div><div class="option"><label><input type="radio" name="q2" value="2"><span class="option-text">...bara handlar ekologiskt.</span></label></div><div class="option"><label><input type="radio" name="q2" value="3"><span class="option-text">...aldrig tänker på miljön.</span></label></div><div class="feedback" id="feedback2"></div></div><div class="matching-item"><h3>C. Att engagera sig i en miljögrupp kan ge...</h3><div class="sentence-part">Att engagera sig i en miljögrupp kan ge...</div><div class="option"><label><input type="radio" name="q3" value="1"><span class="option-text">...kunskap och gemenskap med likasinnade.</span></label></div><div class="option"><label><input type="radio" name="q3" value="2"><span class="option-text">...bara problem mellan medlemmarna.</span></label></div><div class="option"><label><input type="radio" name="q3" value="3"><span class="option-text">...en garanti att alla miljöproblem löses.</span></label></div><div class="feedback" id="feedback3"></div></div><div class="matching-item"><h3>D. För stor förändring måste...</h3><div class="sentence-part">För stor förändring måste...</div><div class="option"><label><input type="radio" name="q4" value="1"><span class="option-text">...företag, staten och medborgare arbeta tillsammans.</span></label></div><div class="option"><label><input type="radio" name="q4" value="2"><span class="option-text">...bara privatpersoner göra små val.</span></label></div><div class="option"><label><input type="radio" name="q4" value="3"><span class="option-text">...man sluta använda modern teknologi.</span></label></div><div class="feedback" id="feedback4"></div></div><div class="matching-item"><h3>E. Små miljöval kan inspirera andra eftersom...</h3><div class="sentence-part">Små miljöval kan inspirera andra eftersom...</div><div class="option"><label><input type="radio" name="q5" value="1"><span class="option-text">...människor ser resultaten och vill delta.</span></label></div><div class="option"><label><input type="radio" name="q5" value="2"><span class="option-text">...det är obligatoriskt att följa exempel.</span></label></div><div class="option"><label><input type="radio" name="q5" value="3"><span class="option-text">...ingen bryr sig om miljön.</span></label></div><div class="feedback" id="feedback5"></div></div><div class="matching-item"><h3>F. Att reflektera över sin konsumtion är ett steg för att...</h3><div class="sentence-part">Att reflektera över sin konsumtion är ett steg för att...</div><div class="option"><label><input type="radio" name="q6" value="1"><span class="option-text">...bli helt perfekt i allt.</span></label></div><div class="option"><label><input type="radio" name="q6" value="2"><span class="option-text">...aldrig köpa något.</span></label></div><div class="option"><label><input type="radio" name="q6" value="3"><span class="option-text">...göra medvetna val som passar din livsstil.</span></label></div><div class="feedback" id="feedback6"></div></div><button type="submit" class="btn-submit">Kontrollera dina svar</button><div class="result-summary" id="results"></div></form><div class="nav-container"><button id="prevBtn" class="btn-nav">← Föregående</button><a href="index.html" class="btn-nav">Start</a><button id="nextBtn" class="btn-nav">Nästa →</button></div></div><script>
+const TASK=5;
+const QS=['q1','q2','q3','q4','q5','q6'];
+const CORRECT={q1:'1',q2:'1',q3:'1',q4:'1',q5:'1',q6:'3'};
+const FB={
+  '1': {ok:'✓ Rätt! Lokala produkter minskar transportavstånd och gynnar den lokala ekonomin.', wrong:'✗ Inte helt rätt. Tänk på vad som händer med transporterna när du handlar lokalt istället för från andra sidan världen.'},
+  '2': {ok:'✓ Rätt! Att reparera och köpa secondhand är hållbart utan att det behöver kosta mer.', wrong:'✗ Inte helt rätt. Bara handla ekologiskt kan faktiskt bli dyrt. Finns det ett billigare alternativ i listan?'},
+  '3': {ok:'✓ Rätt! Gemenskap och kunskap är de viktigaste vinsterna med en miljögrupp.', wrong:'✗ Inte helt rätt. Ingen grupp kan garantera att alla miljöproblem löses. Vad är en mer realistisk fördel?'},
+  '4': {ok:'✓ Rätt! Stora förändringar kräver samarbete mellan individer, företag och stat.', wrong:'✗ Inte helt rätt. Varken bara individer eller teknikavstående räcker. Vilket alternativ beskriver ett bredare samarbete?'},
+  '5': {ok:'✓ Rätt! När andra ser konkreta resultat blir de motiverade att göra liknande val.', wrong:'✗ Inte helt rätt. Inspiration bygger på frivillighet och synliga resultat, inte på tvång. Vilket alternativ stämmer?'},
+  '6': {ok:'✓ Rätt! Att reflektera leder till medvetna val som passar just din livsstil.', wrong:'✗ Inte helt rätt. Reflektion handlar inte om perfektion eller att sluta konsumera, utan om att göra klokare val.'},
+};
+function getAns(q){const radios=document.querySelectorAll('input[name="'+q+'"]');for(let i=0;i<radios.length;i++){if(radios[i].checked)return radios[i].value}return null}
+window.addEventListener('DOMContentLoaded',function(){
+  QS.forEach(q=>{const s=sessionStorage.getItem('task5_'+q);if(s){const radios=document.querySelectorAll('input[name="'+q+'"]');for(let i=0;i<radios.length;i++){if(radios[i].value===s){radios[i].checked=true;break}}}});
+  const sc=sessionStorage.getItem('task5_score');if(sc!==null)showResult(parseInt(sc));
+});
+window.addEventListener('beforeunload',function(){QS.forEach(q=>{const a=getAns(q);if(a)sessionStorage.setItem('task5_'+q,a)})});
+function showResult(sc){
+  const p=Math.round(sc*100/6);
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').innerHTML='<h2>Dina resultat för uppgift 5</h2><p>Du svarade rätt på '+sc+' av 6 frågor ('+p+'%)</p>';
+  document.querySelector('.btn-submit').disabled=true;
+  document.querySelectorAll('input[type="radio"]').forEach(r=>{r.disabled=true});
+  QS.forEach(q=>{
+    const a=getAns(q);const num=q.replace('q','');const fb=document.getElementById('feedback'+num);
+    if(!a||!fb)return;
+    const ok=(a===CORRECT[q]);
+    fb.textContent=ok?FB[num].ok:FB[num].wrong;
+    fb.classList.add('show');fb.classList.toggle('correct',ok);fb.classList.toggle('incorrect',!ok);
+  });
+}
+document.getElementById('sentenceForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const empty=QS.filter(q=>!getAns(q));
+  if(empty.length>0){
+    QS.forEach(q=>{
+      const num=q.replace('q','');const fb=document.getElementById('feedback'+num);
+      if(!getAns(q)){fb.textContent='Du måste välja ett svar!';fb.classList.add('show','incorrect');fb.classList.remove('correct')}
+      else{fb.classList.remove('show','correct','incorrect')}
+    });
+    document.querySelector('#sentenceForm .feedback.show').scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+  let cnt=0;
+  QS.forEach(q=>{
+    const a=getAns(q);const num=q.replace('q','');const fb=document.getElementById('feedback'+num);
+    const ok=(a===CORRECT[q]);
+    fb.textContent=ok?FB[num].ok:FB[num].wrong;
+    fb.classList.add('show');fb.classList.toggle('correct',ok);fb.classList.toggle('incorrect',!ok);
+    if(ok)cnt++;
+  });
+  sessionStorage.setItem('task5_score',cnt);sessionStorage.setItem('task5_total',6);
+  const p=Math.round(cnt*100/6);
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').innerHTML='<h2>Dina resultat för uppgift 5</h2><p>Du svarade rätt på '+cnt+' av 6 frågor ('+p+'%)</p>';
+  document.querySelector('.btn-submit').disabled=true;
+  document.querySelectorAll('input[type="radio"]').forEach(r=>{r.disabled=true});
+  QS.forEach(q=>{const a=getAns(q);if(a)sessionStorage.setItem('task5_'+q,a)});
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+});
+document.getElementById('prevBtn').addEventListener('click',function(){location.href='uppgift_4_meddelanden.html'});
+document.getElementById('nextBtn').addEventListener('click',function(){location.href='uppgift_6_åsikter.html'});
+</script>
+</body></html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Totalt resultat</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);min-height:100vh;padding:20px}
+.container{max-width:700px;margin:0 auto;background:white;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1);padding:40px}
+h1{color:#2c3e50;font-size:28px;margin-bottom:8px}
+.subtitle{color:#7f8c8d;font-size:14px;margin-bottom:30px}
+.grand-box{background:linear-gradient(135deg,#27ae60,#2ecc71);border-radius:10px;padding:25px;text-align:center;margin-bottom:30px;color:white}
+.grand-box h2{font-size:18px;opacity:.9;margin-bottom:10px}
+.grand-number{font-size:48px;font-weight:700;margin-bottom:8px}
+.grand-pct{font-size:20px;opacity:.85;margin-bottom:15px}
+.grand-bar-bg{background:rgba(255,255,255,.3);border-radius:20px;height:12px;overflow:hidden}
+.grand-bar-fill{background:white;height:12px;border-radius:20px;transition:width .6s ease}
+.breakdown{margin-bottom:30px}
+.breakdown h3{color:#2c3e50;font-size:16px;margin-bottom:15px}
+.task-row{display:grid;grid-template-columns:100px 50px 1fr 55px;gap:10px;align-items:center;margin-bottom:12px;padding:10px 12px;background:#f8f9fa;border-radius:8px}
+.task-row.incomplete{opacity:.5}
+.task-label{color:#2c3e50;font-weight:600;font-size:14px}
+.task-score{color:#7f8c8d;font-size:14px;text-align:center}
+.task-bar{background:#ecf0f1;border-radius:10px;height:8px;overflow:hidden}
+.task-fill{background:#27ae60;height:8px;border-radius:10px}
+.task-pct{color:#2c3e50;font-size:13px;font-weight:600;text-align:right}
+.btn-reset{background:#e74c3c;color:white;padding:14px 30px;border:none;border-radius:8px;cursor:pointer;font-size:15px;width:100%;margin-top:10px}
+.btn-reset:hover{background:#c0392b}
+.btn-back{display:block;text-align:center;color:#3498db;text-decoration:none;margin-top:15px;font-size:14px}
+.btn-back:hover{text-decoration:underline}
+</style></head><body><div class="container">
+<h1>Totalt resultat</h1>
+<p class="subtitle">Sammanfattning av alla uppgifter</p>
+<div class="grand-box">
+  <h2>Totalpoäng</h2>
+  <div class="grand-number" id="grandScore">–</div>
+  <div class="grand-pct" id="grandPct">–</div>
+  <div class="grand-bar-bg"><div class="grand-bar-fill" id="grandBar" style="width:0%"></div></div>
+</div>
+<div class="breakdown">
+  <h3>Resultat per uppgift</h3>
+  <div id="breakdown"></div>
+</div>
+<button id="resetBtn" class="btn-reset">🔄 Gör provet igen</button>
+<a href="index.html" class="btn-back">← Tillbaka till startsidan</a>
+</div>
+<script>
+window.addEventListener('load',function(){
+  const totals={1:6,2:6,3:5,4:8,5:6,6:6};
+  let grandScore=0,grandTotal=0;
+  let html='';
+  for(let i=1;i<=6;i++){
+    const sc=sessionStorage.getItem('task'+i+'_score');
+    const tot=totals[i];
+    if(sc!==null){
+      const n=parseInt(sc);
+      const p=Math.round(n*100/tot);
+      grandScore+=n;grandTotal+=tot;
+      html+='<div class="task-row"><span class="task-label">Uppgift '+i+'</span><span class="task-score">'+n+'/'+tot+'</span><div class="task-bar"><div class="task-fill" style="width:'+p+'%"></div></div><span class="task-pct">'+p+'%</span></div>';
+    } else {
+      html+='<div class="task-row incomplete"><span class="task-label">Uppgift '+i+'</span><span class="task-score">–</span><div class="task-bar"></div><span class="task-pct">Ej gjord</span></div>';
+    }
+  }
+  document.getElementById('breakdown').innerHTML=html;
+  if(grandTotal>0){
+    const gp=Math.round(grandScore*100/grandTotal);
+    document.getElementById('grandScore').textContent=grandScore+' av '+grandTotal;
+    document.getElementById('grandPct').textContent=gp+'%';
+    document.getElementById('grandBar').style.width=gp+'%';
+  }
+});
+document.getElementById('resetBtn').addEventListener('click',function(){
+  sessionStorage.clear();location.href='index.html';
+});
+</script>
+</body></html>

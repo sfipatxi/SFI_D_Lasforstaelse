@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Uppgift 2</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);min-height:100vh;padding:20px}.container{max-width:900px;margin:0 auto;background:white;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1);padding:40px}h1{color:#2c3e50;font-size:28px;margin-bottom:10px}.subtitle{color:#7f8c8d;font-size:14px;margin-bottom:30px}.word-block{margin-bottom:35px;padding:20px;background:#f9fafb;border-radius:8px;border:1px solid #e1e8ed}.word-block h3{color:#2c3e50;font-size:16px;margin-bottom:12px}.context-text{background:white;border-left:4px solid #3498db;padding:12px;margin-bottom:15px;border-radius:3px;font-style:italic;color:#34495e;line-height:1.6}.underlined-word{text-decoration:underline;font-weight:600;color:#c0392b}.option{margin-bottom:12px}.option label{display:flex;align-items:flex-start;cursor:pointer;padding:10px;border-radius:5px;transition:background-color .2s}.option label:hover{background-color:#ecf0f1}.option input[type="radio"]{margin-right:10px;margin-top:3px;cursor:pointer;width:18px;height:18px}.option input[type="radio"]:disabled{cursor:not-allowed;opacity:.5}.option input[type="radio"]:disabled+.option-text{opacity:.6;color:#95a5a6}.option-text{color:#2c3e50}.feedback{margin-top:12px;padding:10px;border-radius:5px;display:none;font-weight:500;font-size:14px;font-size:14px}.feedback.show{display:block}.feedback.correct{background-color:#d5f4e6;color:#27ae60;border-left:4px solid #27ae60}.feedback.incorrect{background-color:#fadbd8;color:#c0392b;border-left:4px solid #c0392b}.btn-submit{background-color:#27ae60;color:white;padding:12px 30px;border:none;border-radius:5px;cursor:pointer;font-size:16px;margin-top:20px;width:100%;box-sizing:border-box}.btn-submit:hover:not(:disabled){background-color:#229954}.btn-submit:disabled{background-color:#bdc3c7;cursor:not-allowed;opacity:.6}.result-summary{margin-top:40px;padding:20px;background:#d5f4e6;border-radius:8px;text-align:center;display:none}.result-summary.show{display:block}.result-summary h2{color:#27ae60;margin-bottom:10px}.result-summary p{color:#2c3e50;font-size:16px}.nav-container{display:flex;gap:15px;justify-content:space-between;margin-top:30px;flex-wrap:wrap}.btn-nav{background-color:#3498db;color:white;padding:12px 20px;border:none;border-radius:5px;cursor:pointer;font-size:14px;text-decoration:none;display:inline-block}.btn-nav:hover{background-color:#2980b9}</style></head><body><div class="container"><h1>Uppgift 2 - Vad betyder orden?</h1><p class="subtitle">Många personer använder sin miljö på olika sätt. Här berättar några om sina erfarenheter. Kryssa för det alternativ som stämmer bäst med de understrukna orden.</p><form id="quizForm"><div class="word-block"><h3>A. Julia, 33 år</h3><div class="context-text">Jag försöker <span class="underlined-word">reducera</span> min matsvinnet genom att planera mina inköp noga och använda rester på kreativa sätt.</div><div class="option"><label><input type="radio" name="q1" value="incorrect1"><span class="option-text">öka</span></label></div><div class="option"><label><input type="radio" name="q1" value="correct"><span class="option-text">minska</span></label></div><div class="option"><label><input type="radio" name="q1" value="incorrect2"><span class="option-text">skicka</span></label></div><div class="feedback" id="feedback1"></div></div><div class="word-block"><h3>B. Hassan, 41 år</h3><div class="context-text">Min familj försöker <span class="underlined-word">minimera</span> användningen av engångsplastföremål. Vi köper varaktiga matbehållare istället och använder tygsäckar när vi handlar.</div><div class="option"><label><input type="radio" name="q2" value="incorrect1"><span class="option-text">helt eliminera</span></label></div><div class="option"><label><input type="radio" name="q2" value="correct"><span class="option-text">minska så mycket som möjligt</span></label></div><div class="option"><label><input type="radio" name="q2" value="incorrect2"><span class="option-text">organisera</span></label></div><div class="feedback" id="feedback2"></div></div><div class="word-block"><h3>C. Sofia, 28 år</h3><div class="context-text">Jag försöker <span class="underlined-word">ifrågasätta</span> varje inköp jag gör. Innan jag köper något frågar jag mig själv om jag verkligen behöver det och om det är gjort på ett hållbart sätt.</div><div class="option"><label><input type="radio" name="q3" value="incorrect1"><span class="option-text">acceptera helt</span></label></div><div class="option"><label><input type="radio" name="q3" value="correct"><span class="option-text">kritiskt reflektera över</span></label></div><div class="option"><label><input type="radio" name="q3" value="incorrect2"><span class="option-text">fråga försäljaren</span></label></div><div class="feedback" id="feedback3"></div></div><div class="word-block"><h3>D. Marco, 36 år</h3><div class="context-text">Jag <span class="underlined-word">prioriterar</span> att köpa mat från lokala bönder när det är möjligt, även om det kan vara dyrare än livsmedelsbutiken.</div><div class="option"><label><input type="radio" name="q4" value="incorrect1"><span class="option-text">undviker</span></label></div><div class="option"><label><input type="radio" name="q4" value="correct"><span class="option-text">säger framför andra saker</span></label></div><div class="option"><label><input type="radio" name="q4" value="incorrect2"><span class="option-text">litar på</span></label></div><div class="feedback" id="feedback4"></div></div><div class="word-block"><h3>E. Amina, 31 år</h3><div class="context-text">Jag <span class="underlined-word">engagerar mig</span> i en närliggande grupp som arbetar för att rädda ett hotad naturreservat. Vi arrangerar städdagar och sprider kunskap om området.</div><div class="option"><label><input type="radio" name="q5" value="incorrect1"><span class="option-text">besöker ofta</span></label></div><div class="option"><label><input type="radio" name="q5" value="correct"><span class="option-text">deltar aktivt</span></label></div><div class="option"><label><input type="radio" name="q5" value="incorrect2"><span class="option-text">donerar pengar</span></label></div><div class="feedback" id="feedback5"></div></div><div class="word-block"><h3>F. Thomas, 45 år</h3><div class="context-text">Mitt mål är att <span class="underlined-word">eliminera</span> mitt beroende av fossila bränslen genom att cykla, ta bussen och ett par gånger per år leasa en elbil för längre resor.</div><div class="option"><label><input type="radio" name="q6" value="incorrect1"><span class="option-text">minska</span></label></div><div class="option"><label><input type="radio" name="q6" value="correct"><span class="option-text">helt ta bort</span></label></div><div class="option"><label><input type="radio" name="q6" value="incorrect2"><span class="option-text">förstå</span></label></div><div class="feedback" id="feedback6"></div></div><button type="submit" class="btn-submit">Kontrollera dina svar</button><div class="result-summary" id="results"></div></form><div class="nav-container"><button id="prevBtn" class="btn-nav">← Föregående uppgift</button><a href="index.html" class="btn-nav">Tillbaka till start</a><button id="nextBtn" class="btn-nav">Nästa uppgift →</button></div></div><script>
+const TASK=2;
+const QS=['q1','q2','q3','q4','q5','q6'];
+const FB={
+  '1': {ok:'✓ Rätt! "Reducera" betyder att minska — precis som Julia vill minska sitt matsvinn.', wrong:'✗ Inte helt rätt. Tänk på vad Julia försöker göra med sitt matsvinn — mer eller mindre?'},
+  '2': {ok:'✓ Rätt! "Minimera" betyder att minska så mycket som möjligt, men inte nödvändigtvis helt eliminera.', wrong:'✗ Inte helt rätt. Skillnaden är viktig: att minimera är inte detsamma som att helt sluta med något.'},
+  '3': {ok:'✓ Rätt! "Ifrågasätta" betyder att kritiskt reflektera och inte ta något för givet.', wrong:'✗ Inte helt rätt. Sofia frågar sig själv om hon behöver saken — det handlar om att tänka kritiskt, inte fråga någon annan.'},
+  '4': {ok:'✓ Rätt! "Prioritera" betyder att sätta något framför annat, även om det kostar mer.', wrong:'✗ Inte helt rätt. Marco väljer lokalt även när det är dyrare — det är att prioritera, inte att undvika eller lita på.'},
+  '5': {ok:'✓ Rätt! "Engagera sig" betyder att delta aktivt, inte bara besöka eller ge pengar.', wrong:'✗ Inte helt rätt. Amina arrangerar städdagar och sprider kunskap — det är ett aktivt deltagande, inte bara ett besök.'},
+  '6': {ok:'✓ Rätt! "Eliminera" är starkare än "minska" — det betyder att helt ta bort något.', wrong:'✗ Inte helt rätt. Thomas vill bli av med fossila bränslen helt, inte bara minska dem. Vilket ord passar det?'},
+};
+function getAns(q){const r=document.querySelector('input[name="'+q+'"]:checked');return r?r.value:null}
+window.addEventListener('DOMContentLoaded',function(){
+  QS.forEach(q=>{const s=sessionStorage.getItem('task2_'+q);if(s){const r=document.querySelector('input[name="'+q+'"][value="'+s+'"]');if(r)r.checked=true}});
+  const sc=sessionStorage.getItem('task2_score');if(sc!==null)showResult(parseInt(sc));
+});
+window.addEventListener('beforeunload',function(){QS.forEach(q=>{const r=document.querySelector('input[name="'+q+'"]:checked');if(r)sessionStorage.setItem('task2_'+q,r.value)})});
+function showResult(sc){
+  const p=Math.round(sc*100/6);
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').innerHTML='<h2>Dina resultat för uppgift 2</h2><p>Du svarade rätt på '+sc+' av 6 frågor ('+p+'%)</p>';
+  document.querySelector('.btn-submit').disabled=true;
+  document.querySelectorAll('input[type="radio"]').forEach(r=>{r.disabled=true});
+  QS.forEach(q=>{
+    const r=document.querySelector('input[name="'+q+'"]:checked');
+    const num=q.replace('q','');const fb=document.getElementById('feedback'+num);
+    if(!r||!fb)return;
+    const ok=(r.value==='correct');
+    fb.textContent=ok?FB[num].ok:FB[num].wrong;
+    fb.classList.add('show');fb.classList.toggle('correct',ok);fb.classList.toggle('incorrect',!ok);
+  });
+}
+document.getElementById('quizForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const empty=QS.filter(q=>!getAns(q));
+  if(empty.length>0){
+    QS.forEach(q=>{
+      const num=q.replace('q','');const fb=document.getElementById('feedback'+num);
+      if(!getAns(q)){fb.textContent='Du måste välja ett svar!';fb.classList.add('show','incorrect');fb.classList.remove('correct')}
+      else{fb.classList.remove('show','correct','incorrect')}
+    });
+    document.querySelector('#quizForm .feedback.show').scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+  let cnt=0;
+  QS.forEach(q=>{
+    const r=document.querySelector('input[name="'+q+'"]:checked');
+    const num=q.replace('q','');const fb=document.getElementById('feedback'+num);
+    const ok=(r.value==='correct');
+    fb.textContent=ok?FB[num].ok:FB[num].wrong;
+    fb.classList.add('show');fb.classList.toggle('correct',ok);fb.classList.toggle('incorrect',!ok);
+    if(ok)cnt++;
+  });
+  sessionStorage.setItem('task2_score',cnt);sessionStorage.setItem('task2_total',6);
+  const p=Math.round(cnt*100/6);
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').innerHTML='<h2>Dina resultat för uppgift 2</h2><p>Du svarade rätt på '+cnt+' av 6 frågor ('+p+'%)</p>';
+  document.querySelector('.btn-submit').disabled=true;
+  document.querySelectorAll('input[type="radio"]').forEach(r=>{r.disabled=true});
+  QS.forEach(q=>{const r=document.querySelector('input[name="'+q+'"]:checked');if(r)sessionStorage.setItem('task2_'+q,r.value)});
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+});
+document.getElementById('prevBtn').addEventListener('click',function(){location.href='uppgift_1_artikel_frågor.html'});
+document.getElementById('nextBtn').addEventListener('click',function(){location.href='uppgift_3_para_ihop.html'});
+</script>
+</body></html>

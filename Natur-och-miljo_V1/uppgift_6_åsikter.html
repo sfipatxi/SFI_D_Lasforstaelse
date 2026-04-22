@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Uppgift 6</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);min-height:100vh;padding:20px}.container{max-width:900px;margin:0 auto;background:white;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1);padding:40px}h1{color:#2c3e50;font-size:28px;margin-bottom:10px}.subtitle{color:#7f8c8d;font-size:14px;margin-bottom:30px}.editorial-box{background:#fef5e7;border-left:4px solid #f39c12;padding:20px;margin-bottom:40px;border-radius:5px}.editorial-box h2{font-size:18px;color:#2c3e50;margin-bottom:15px}.editorial-box p{line-height:1.7;color:#2c3e50;margin-bottom:10px}.author{color:#f39c12;font-weight:600;margin-top:15px}.opinion-block{margin-bottom:30px;padding:20px;background:#f9fafb;border-radius:8px;border:1px solid #e1e8ed}.opinion-block h3{color:#2c3e50;font-size:16px;margin-bottom:12px}.person-name{color:#27ae60;font-weight:600}.opinion-text{background:white;border-left:4px solid #3498db;padding:12px;margin-bottom:15px;border-radius:3px;font-style:italic;color:#2c3e50;line-height:1.6;font-size:14px}.question-text{color:#2c3e50;margin-bottom:12px;font-weight:500;font-size:14px}.option{margin-bottom:10px}.option label{display:flex;cursor:pointer;padding:10px;border-radius:5px}.option label:hover:not(.disabled){background-color:#ecf0f1}.option input{margin-right:10px;cursor:pointer}.option input:disabled{cursor:not-allowed;opacity:.7}.feedback{margin-top:12px;padding:10px;border-radius:5px;display:none;font-weight:500;font-size:14px;font-size:14px}.feedback.show{display:block}.feedback.correct{background-color:#d5f4e6;color:#27ae60;border-left:4px solid #27ae60}.feedback.incorrect{background-color:#fadbd8;color:#c0392b;border-left:4px solid #c0392b}.btn-submit{background-color:#27ae60;color:white;padding:12px 30px;border:none;border-radius:5px;cursor:pointer;font-size:16px;margin-top:20px;width:100%;box-sizing:border-box}.btn-submit:hover:not(:disabled){background-color:#229954}.btn-submit:disabled{background-color:#bdc3c7;cursor:not-allowed}.btn-show-total{background-color:#f39c12;color:white;padding:12px 30px;border:none;border-radius:5px;cursor:pointer;font-size:16px;margin-top:20px;width:100%;box-sizing:border-box;display:none}.btn-show-total:hover{background-color:#e67e22}.btn-show-total.show{display:block}.result-summary{margin-top:40px;padding:20px;background:#d5f4e6;border-radius:8px;text-align:center;display:none}.result-summary.show{display:block}.result-summary h2{color:#27ae60;margin-bottom:15px}.result-summary p{color:#2c3e50;font-size:16px;margin-bottom:15px}.nav-container{display:flex;gap:15px;justify-content:space-between;margin-top:30px}.btn-nav{background-color:#3498db;color:white;padding:12px 20px;border:none;border-radius:5px;cursor:pointer;font-size:14px;text-decoration:none;display:inline-block}.btn-nav:hover{background-color:#2980b9}.btn-total{background:#f39c12;color:white;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;font-size:15px;margin-top:12px;font-weight:600;display:inline-block}.btn-total:hover{background:#e67e22}</style></head><body><div class="container"><h1>Uppgift 6 - Vad tycker de?</h1><p class="subtitle">Läs insändaren och bedöm om läsarna håller med.</p><div class="editorial-box"><h2>Miljöarbete börjar hemma</h2><p>Vi måste se miljöproblemen som delad ansvar. Varje person kan göra skillnad genom dagliga val. Om vi reparerar saker, handlar lokalt och minskar avfall kan vi tillsammans skapa stor förändring. Miljöarbete börjar inte med stora demonstrationer utan med små val i vardagen.</p><div class="author">/ Kerstin Bergman /</div></div><form id="opinionsForm"><div class="opinion-block"><h3><span class="person-name">A. David</span></h3><div class="opinion-text">Jag håller helt med Kerstin. Om vi alla gör små miljövänliga val blir det tillsammans en stor förändring.</div><div class="question-text">Tycker David som Kerstin?</div><div class="option"><label><input type="radio" name="q1" value="correct"> Ja</label></div><div class="option"><label><input type="radio" name="q1" value="incorrect"> Nej</label></div><div class="option"><label><input type="radio" name="q1" value="incorrect2"> Både ja och nej</label></div><div class="feedback" id="feedback1"></div></div><div class="opinion-block"><h3><span class="person-name">B. Maria</span></h3><div class="opinion-text">Kerstin har rätt i mycket, men företag producerar 70% av världens växthusgaser. Vi behöver både individuella ändringar OCH lagkrav för företag.</div><div class="question-text">Tycker Maria som Kerstin?</div><div class="option"><label><input type="radio" name="q2" value="incorrect"> Ja</label></div><div class="option"><label><input type="radio" name="q2" value="incorrect2"> Nej</label></div><div class="option"><label><input type="radio" name="q2" value="correct"> Både ja och nej</label></div><div class="feedback" id="feedback2"></div></div><div class="opinion-block"><h3><span class="person-name">C. Hassan</span></h3><div class="opinion-text">Att miljökrisen löses genom att reparera gamla jeans är naivt. Vi behöver radikala samhällsförändringar nu, inte bara små individuella val.</div><div class="question-text">Tycker Hassan som Kerstin?</div><div class="option"><label><input type="radio" name="q3" value="incorrect"> Ja</label></div><div class="option"><label><input type="radio" name="q3" value="correct"> Nej</label></div><div class="option"><label><input type="radio" name="q3" value="incorrect2"> Både ja och nej</label></div><div class="feedback" id="feedback3"></div></div><div class="opinion-block"><h3><span class="person-name">D. Sofia</span></h3><div class="opinion-text">Små val spelar roll, men systemet måste förändras. Vi behöver bättre kollektivtrafik och lagkrav för företag. Individuella val räcker inte om systemet inte ändras.</div><div class="question-text">Tycker Sofia som Kerstin?</div><div class="option"><label><input type="radio" name="q4" value="incorrect"> Ja</label></div><div class="option"><label><input type="radio" name="q4" value="incorrect2"> Nej</label></div><div class="option"><label><input type="radio" name="q4" value="correct"> Både ja och nej</label></div><div class="feedback" id="feedback4"></div></div><div class="opinion-block"><h3><span class="person-name">E. Anders</span></h3><div class="opinion-text">Kerstins fokus på små personliga handlingar är tomt. Miljöfrågor är komplicerade och kräver forskning och policy-ändringar, inte att vi reparerar kläder.</div><div class="question-text">Tycker Anders som Kerstin?</div><div class="option"><label><input type="radio" name="q5" value="incorrect"> Ja</label></div><div class="option"><label><input type="radio" name="q5" value="correct"> Nej</label></div><div class="option"><label><input type="radio" name="q5" value="incorrect2"> Både ja och nej</label></div><div class="feedback" id="feedback5"></div></div><div class="opinion-block"><h3><span class="person-name">F. Liv</span></h3><div class="opinion-text">Små val spelar roll, men många kan inte välja. Lokalt handla eller secondhand blir för dyrt för dem som redan kämpar ekonomiskt. Miljöarbete kan inte vara privileg för rika.</div><div class="question-text">Tycker Liv som Kerstin?</div><div class="option"><label><input type="radio" name="q6" value="incorrect"> Ja</label></div><div class="option"><label><input type="radio" name="q6" value="incorrect2"> Nej</label></div><div class="option"><label><input type="radio" name="q6" value="correct"> Både ja och nej</label></div><div class="feedback" id="feedback6"></div></div><button type="submit" class="btn-submit">Kontrollera dina svar</button><div class="result-summary" id="results"></div><button type="button" class="btn-show-total" onclick="showTotal()">Visa totalt resultat →</button></form><div class="nav-container"><button id="prevBtn" class="btn-nav">← Föregående</button><a href="index.html" class="btn-nav">Start</a></div></div><script>
+const TASK=6;
+const QS=['q1','q2','q3','q4','q5','q6'];
+const FB={
+  '1': {ok:'✓ Rätt! David håller helt med Kerstin om att små individuella val gör stor skillnad tillsammans.', wrong:'✗ Inte helt rätt. Läs Davids kommentar igen — är det något han inte håller med om, eller instämmer han fullt ut?'},
+  '2': {ok:'✓ Rätt! Maria håller delvis med, men tillägger att företag och lagstiftning också krävs.', wrong:'✗ Inte helt rätt. Maria säger "Kerstin har rätt i mycket, men..." — det är varken ett fullt ja eller ett nej.'},
+  '3': {ok:'✓ Rätt! Hassan avvisar Kerstins syn och menar att små val inte räcker.', wrong:'✗ Inte helt rätt. Hassan kallar Kerstins approach "naiv" — tycker han som hon eller tvärtom?'},
+  '4': {ok:'✓ Rätt! Sofia håller delvis med om att små val spelar roll, men kräver också systemförändringar.', wrong:'✗ Inte helt rätt. Sofia säger "små val spelar roll, men..." — det är en blandad åsikt, inte ett enkelt ja eller nej.'},
+  '5': {ok:'✓ Rätt! Anders avfärdar Kerstins fokus på personliga handlingar och vill ha strukturella lösningar.', wrong:'✗ Inte helt rätt. Anders kallar Kerstins fokus "tomt" — det är ett tydligt motstånd, inte en instämmande åsikt.'},
+  '6': {ok:'✓ Rätt! Liv håller delvis med men påpekar att ekonomiska begränsningar gör det svårt för alla.', wrong:'✗ Inte helt rätt. Liv säger att små val spelar roll MEN att det inte är tillgängligt för alla — det är en nyanserad åsikt.'},
+};
+function getAns(q){const r=document.querySelector('input[name="'+q+'"]:checked');return r?r.value:null}
+window.addEventListener('DOMContentLoaded',function(){
+  QS.forEach(q=>{const s=sessionStorage.getItem('task6_'+q);if(s){const r=document.querySelector('input[name="'+q+'"][value="'+s+'"]');if(r)r.checked=true}});
+  const sc=sessionStorage.getItem('task6_score');if(sc!==null)showResult(parseInt(sc));
+});
+window.addEventListener('beforeunload',function(){QS.forEach(q=>{const r=document.querySelector('input[name="'+q+'"]:checked');if(r)sessionStorage.setItem('task6_'+q,r.value)})});
+function showTotal(){location.href='total_results.html'}
+function showResult(sc){
+  const p=Math.round(sc*100/6);
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').innerHTML='<h2>Dina resultat för uppgift 6</h2><p>Du svarade rätt på '+sc+' av 6 frågor ('+p+'%)</p><button class="btn-total" onclick="showTotal()">🏆 Visa totalt resultat</button>';
+  document.querySelector('.btn-submit').disabled=true;
+  document.querySelectorAll('input[type="radio"]').forEach(r=>{r.disabled=true});
+  QS.forEach(q=>{
+    const r=document.querySelector('input[name="'+q+'"]:checked');
+    const num=q.replace('q','');const fb=document.getElementById('feedback'+num);
+    if(!r||!fb)return;
+    const ok=(r.value==='correct');
+    fb.textContent=ok?FB[num].ok:FB[num].wrong;
+    fb.classList.add('show');fb.classList.toggle('correct',ok);fb.classList.toggle('incorrect',!ok);
+  });
+}
+document.getElementById('opinionsForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const empty=QS.filter(q=>!getAns(q));
+  if(empty.length>0){
+    QS.forEach(q=>{
+      const num=q.replace('q','');const fb=document.getElementById('feedback'+num);
+      if(!getAns(q)){fb.textContent='Du måste välja ett svar!';fb.classList.add('show','incorrect');fb.classList.remove('correct')}
+      else{fb.classList.remove('show','correct','incorrect')}
+    });
+    document.querySelector('#opinionsForm .feedback.show').scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+  let cnt=0;
+  QS.forEach(q=>{
+    const r=document.querySelector('input[name="'+q+'"]:checked');
+    const num=q.replace('q','');const fb=document.getElementById('feedback'+num);
+    const ok=(r.value==='correct');
+    fb.textContent=ok?FB[num].ok:FB[num].wrong;
+    fb.classList.add('show');fb.classList.toggle('correct',ok);fb.classList.toggle('incorrect',!ok);
+    if(ok)cnt++;
+  });
+  sessionStorage.setItem('task6_score',cnt);sessionStorage.setItem('task6_total',6);
+  const p=Math.round(cnt*100/6);
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').innerHTML='<h2>Dina resultat för uppgift 6</h2><p>Du svarade rätt på '+cnt+' av 6 frågor ('+p+'%)</p><button class="btn-total" onclick="showTotal()">🏆 Visa totalt resultat</button>';
+  document.querySelector('.btn-submit').disabled=true;
+  document.querySelectorAll('input[type="radio"]').forEach(r=>{r.disabled=true});
+  QS.forEach(q=>{const r=document.querySelector('input[name="'+q+'"]:checked');if(r)sessionStorage.setItem('task6_'+q,r.value)});
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+});
+document.getElementById('prevBtn').addEventListener('click',function(){location.href='uppgift_5_delade_meningar.html'});
+</script>
+</body></html>

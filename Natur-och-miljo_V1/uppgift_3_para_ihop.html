@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Uppgift 3</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);min-height:100vh;padding:20px}.container{max-width:1000px;margin:0 auto;background:white;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1);padding:40px}h1{color:#2c3e50;font-size:28px;margin-bottom:10px}.subtitle{color:#7f8c8d;font-size:14px;margin-bottom:30px}.matching-container{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:40px}.column-title{font-weight:600;color:#2c3e50;font-size:16px;margin-bottom:10px;padding-bottom:10px;border-bottom:2px solid #27ae60}.question-box{background:#ecf0f1;margin-top:20px;border-left:4px solid #3498db;padding:15px;border-radius:8px;margin-bottom:15px;font-size:15px}.answer-box{background:#fef5e7;border-left:4px solid #f39c12;padding:15px;border-radius:8px;margin-bottom:15px;font-size:15px}.match-input{width:60px;padding:8px;border:1px solid #bdc3c7;border-radius:4px;margin-top:10px;font-size:14px}.match-input:disabled{background:#e8e8e8;cursor:not-allowed}.feedback{margin-top:15px;padding:12px;border-radius:5px;display:none;font-weight:500;font-size:14px}.feedback.show{display:block}.feedback.correct{background-color:#d5f4e6;color:#27ae60;border-left:4px solid #27ae60}.feedback.incorrect{background-color:#fadbd8;color:#c0392b;border-left:4px solid #c0392b}.btn-submit{background-color:#27ae60;color:white;padding:12px 30px;border:none;border-radius:5px;cursor:pointer;font-size:16px;margin-top:20px;width:100%;box-sizing:border-box}.btn-submit:hover:not(:disabled){background-color:#229954}.btn-submit:disabled{background-color:#bdc3c7;cursor:not-allowed}.result-summary{margin-top:40px;padding:20px;background:#d5f4e6;border-radius:8px;text-align:center;display:none}.result-summary.show{display:block}.result-summary h2{color:#27ae60}.result-summary p{color:#2c3e50;font-size:16px;margin-bottom:15px}.nav-container{display:flex;gap:15px;justify-content:space-between;margin-top:30px;flex-wrap:wrap}.btn-nav{background-color:#3498db;color:white;padding:12px 20px;border:none;border-radius:5px;cursor:pointer;font-size:14px;text-decoration:none;display:inline-block}.btn-nav:hover{background-color:#2980b9}@media (max-width:768px){.matching-container{grid-template-columns:1fr}}</style></head><body><div class="container"><h1>Uppgift 3 - Para ihop frågor och svar</h1><p class="subtitle">Här ser du några frågor och svar om ett kommunalt miljöprogram. Vilken fråga passar till vilket svar?</p><form id="matchingForm"><div class="matching-container"><div class="column"><div class="column-title">FRÅGOR</div><div class="question-box"><strong>A</strong> Vilka kan delta och vilka förutsättningar krävs?<br><input type="text" class="match-input" name="q1" placeholder="Svar: __" maxlength="1"></div><div class="feedback" id="feedback1"></div><div class="question-box"><strong>B</strong> Hur många träffar och hur ofta träffas gruppen?<br><input type="text" class="match-input" name="q2" placeholder="Svar: __" maxlength="1"></div><div class="feedback" id="feedback2"></div><div class="question-box"><strong>C</strong> Vad ingår i programmets innehål?<br><input type="text" class="match-input" name="q3" placeholder="Svar: __" maxlength="1"></div><div class="feedback" id="feedback3"></div><div class="question-box"><strong>D</strong> Hur kan man anmäla sig?<br><input type="text" class="match-input" name="q4" placeholder="Svar: __" maxlength="1"></div><div class="feedback" id="feedback4"></div><div class="question-box"><strong>E</strong> Vad gäller om man missar en träff?<br><input type="text" class="match-input" name="q5" placeholder="Svar: __" maxlength="1"></div><div class="feedback" id="feedback5"></div></div><div class="column"><div class="column-title">SVAR</div><div class="answer-box"><strong>1</strong> Deltagarna diskuterar energisparande och återvinning.</div><div class="answer-box"><strong>2</strong> Programmet pågår 8 veckor med en träff per vecka.</div><div class="answer-box"><strong>3</strong> Målgruppen är vuxna utan krav på tidigare erfarenhet.</div><div class="answer-box"><strong>4</strong> Man kan fortsätta delta och få material senare.</div><div class="answer-box"><strong>5</strong> Man anmäler sig via webbplatsen eller miljöcentralen.</div></div></div><button type="submit" class="btn-submit">Kontrollera dina svar</button><div class="result-summary" id="results"></div></form><div class="nav-container"><button id="prevBtn" class="btn-nav">← Föregående</button><a href="index.html" class="btn-nav">Start</a><button id="nextBtn" class="btn-nav">Nästa →</button></div></div><script>
+const TASK=3;
+const QS=['1','2','3','4','5'];
+const ANSWERS={q1:'5',q2:'2',q3:'1',q4:'5',q5:'4'};
+const FB={
+  '1': {ok:'✓ Rätt! Svar 3 stämmer: målgruppen är vuxna utan krav på tidigare erfarenhet.', wrong:'✗ Inte helt rätt. Läs svar 3 igen — det handlar om vilka som kan delta och om det krävs förkunskaper.'},
+  '2': {ok:'✓ Rätt! Svar 2 stämmer: programmet pågår 8 veckor med en träff per vecka.', wrong:'✗ Inte helt rätt. Frågan gäller hur länge programmet pågår och hur ofta man träffas. Läs svarsalternativen igen.'},
+  '3': {ok:'✓ Rätt! Svar 1 stämmer: deltagarna diskuterar energisparande och återvinning.', wrong:'✗ Inte helt rätt. Frågan gäller vad som ingår i träffarna. Vilket svar beskriver ett konkret innehåll?'},
+  '4': {ok:'✓ Rätt! Svar 5 stämmer: man anmäler sig via webbplatsen eller miljöcentralen.', wrong:'✗ Inte helt rätt. Frågan gäller hur man anmäler sig. Läs igenom svaren och leta efter ett som beskriver en anmälningsprocess.'},
+  '5': {ok:'✓ Rätt! Svar 4 stämmer: man kan fortsätta delta och får material i efterhand.', wrong:'✗ Inte helt rätt. Frågan gäller vad som händer om man missar en träff. Vilket svar tar upp just det?'},
+};
+window.addEventListener('DOMContentLoaded',function(){
+  QS.forEach(q=>{const s=sessionStorage.getItem('task3_q'+q);if(s)document.querySelector('input[name="q'+q+'"]').value=s});
+  const sc=sessionStorage.getItem('task3_score');if(sc!==null)showResult(parseInt(sc));
+});
+window.addEventListener('beforeunload',function(){QS.forEach(q=>{const v=document.querySelector('input[name="q'+q+'"]').value;if(v)sessionStorage.setItem('task3_q'+q,v)})});
+function showResult(sc){
+  const p=Math.round(sc*100/5);
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').innerHTML='<h2>Dina resultat för uppgift 3</h2><p>Du svarade rätt på '+sc+' av 5 frågor ('+p+'%)</p>';
+  document.querySelector('.btn-submit').disabled=true;
+  document.querySelectorAll('input[type="text"]').forEach(x=>{x.disabled=true});
+  QS.forEach(q=>{
+    const v=document.querySelector('input[name="q'+q+'"]').value;
+    const fb=document.getElementById('feedback'+q);if(!v||!fb)return;
+    const ok=(v===ANSWERS['q'+q]);
+    fb.textContent=ok?FB[q].ok:FB[q].wrong;
+    fb.classList.add('show');fb.classList.toggle('correct',ok);fb.classList.toggle('incorrect',!ok);
+  });
+}
+document.getElementById('matchingForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const empty=QS.filter(q=>!document.querySelector('input[name="q'+q+'"]').value.trim());
+  if(empty.length>0){
+    QS.forEach(q=>{
+      const fb=document.getElementById('feedback'+q);
+      if(!document.querySelector('input[name="q'+q+'"]').value.trim()){fb.textContent='Du måste fylla i ett svar!';fb.classList.add('show','incorrect');fb.classList.remove('correct')}
+      else{fb.classList.remove('show','correct','incorrect')}
+    });
+    document.querySelector('#matchingForm .feedback.show').scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+  let cnt=0;
+  QS.forEach(q=>{
+    const v=document.querySelector('input[name="q'+q+'"]').value;
+    const fb=document.getElementById('feedback'+q);
+    const ok=(v===ANSWERS['q'+q]);
+    fb.textContent=ok?FB[q].ok:FB[q].wrong;
+    fb.classList.add('show');fb.classList.toggle('correct',ok);fb.classList.toggle('incorrect',!ok);
+    if(ok)cnt++;
+  });
+  sessionStorage.setItem('task3_score',cnt);sessionStorage.setItem('task3_total',5);
+  const p=Math.round(cnt*100/5);
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').innerHTML='<h2>Dina resultat för uppgift 3</h2><p>Du svarade rätt på '+cnt+' av 5 frågor ('+p+'%)</p>';
+  document.querySelector('.btn-submit').disabled=true;
+  document.querySelectorAll('input[type="text"]').forEach(x=>{x.disabled=true});
+  QS.forEach(q=>{const v=document.querySelector('input[name="q'+q+'"]').value;if(v)sessionStorage.setItem('task3_q'+q,v)});
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+});
+document.getElementById('prevBtn').addEventListener('click',function(){location.href='uppgift_2_understrukna_ord.html'});
+document.getElementById('nextBtn').addEventListener('click',function(){location.href='uppgift_4_meddelanden.html'});
+</script>
+</body></html>

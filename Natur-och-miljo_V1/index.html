@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs D - Natur och miljö - Uppgiftspaket</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .course-info {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+        .tasks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .task-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .task-header {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .task-number {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .task-title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .task-content {
+            padding: 20px;
+        }
+        .task-description {
+            color: #2c3e50;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .task-link {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: 500;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .task-link:hover {
+            background-color: #229954;
+        }
+        .info-box {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .info-box h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        .info-box p {
+            color: #2c3e50;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        .info-box ul {
+            list-style-position: inside;
+            color: #2c3e50;
+            line-height: 1.8;
+            margin-left: 15px;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌱 Natur och miljö</h1>
+            <p class="subtitle">Läsförståelseprov för Kurs D</p>
+            <div class="course-info">
+                <strong>Artikelns tema:</strong> En persons resa från miljömedvetenhet till aktivt miljöarbete genom gemenskap och små, praktiska val.
+            </div>
+        </div>
+
+        <div class="tasks-grid">
+            <!-- Uppgift 1 -->
+            <div class="task-card">
+                <div class="task-header">
+                    <div class="task-number">1</div>
+                    <div class="task-title">En artikel - Frågor</div>
+                </div>
+                <div class="task-content">
+                    <p class="task-description">
+                        Läs artikeln "Från tanke till handling" och besvara sex flervalsfrågor om innehållet. Varje fråga har tre svarsalternativ.
+                    </p>
+                    <a href="uppgift_1_artikel_frågor.html" class="task-link">Starta uppgift 1</a>
+                </div>
+            </div>
+
+            <!-- Uppgift 2 -->
+            <div class="task-card">
+                <div class="task-header">
+                    <div class="task-number">2</div>
+                    <div class="task-title">Understrukna ord</div>
+                </div>
+                <div class="task-content">
+                    <p class="task-description">
+                        Sex personer beskriver sina miljöval. För varje person ska du välja rätt betydelse för det understrukna ordet.
+                    </p>
+                    <a href="uppgift_2_understrukna_ord.html" class="task-link">Starta uppgift 2</a>
+                </div>
+            </div>
+
+            <!-- Uppgift 3 -->
+            <div class="task-card">
+                <div class="task-header">
+                    <div class="task-number">3</div>
+                    <div class="task-title">Para ihop frågor och svar</div>
+                </div>
+                <div class="task-content">
+                    <p class="task-description">
+                        Fem frågor om ett kommunalt miljöprogram ska matchas med fem rätta svar. Skriv numret på rätt svar.
+                    </p>
+                    <a href="uppgift_3_para_ihop.html" class="task-link">Starta uppgift 3</a>
+                </div>
+            </div>
+
+            <!-- Uppgift 4 -->
+            <div class="task-card">
+                <div class="task-header">
+                    <div class="task-number">4</div>
+                    <div class="task-title">Meddelanden</div>
+                </div>
+                <div class="task-content">
+                    <p class="task-description">
+                        Fyra meddelanden från olika människor. För varje meddelande ska du identifiera avsikten och välja rätt avslutning.
+                    </p>
+                    <a href="uppgift_4_meddelanden.html" class="task-link">Starta uppgift 4</a>
+                </div>
+            </div>
+
+            <!-- Uppgift 5 -->
+            <div class="task-card">
+                <div class="task-header">
+                    <div class="task-number">5</div>
+                    <div class="task-title">Delade meningar</div>
+                </div>
+                <div class="task-content">
+                    <p class="task-description">
+                        Sex meningar om miljövänliga val är delade i två delar. Välj rätt slut för varje mening från sju möjligheter.
+                    </p>
+                    <a href="uppgift_5_delade_meningar.html" class="task-link">Starta uppgift 5</a>
+                </div>
+            </div>
+
+            <!-- Uppgift 6 -->
+            <div class="task-card">
+                <div class="task-header">
+                    <div class="task-number">6</div>
+                    <div class="task-title">Åsikter</div>
+                </div>
+                <div class="task-content">
+                    <p class="task-description">
+                        En insändare följd av sex personers reaktioner. Bedöm om varje person håller med, är oense, eller både och.
+                    </p>
+                    <a href="uppgift_6_åsikter.html" class="task-link">Starta uppgift 6</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>Om detta uppgiftspaket</h2>
+            <p>
+                Detta är ett komplett läsförståelseprov för Kurs D inom temat <strong>Natur och miljö</strong>. Paketet innehåller 6 olika uppgifttyper som följer Skolverkets anvisningar för diagnostiska prov.
+            </p>
+            <p><strong>Vad prövar uppgifterna?</strong></p>
+            <ul>
+                <li><strong>Uppgift 1:</strong> Läsförståelse på detaljnivå och helhetsnivå</li>
+                <li><strong>Uppgift 2:</strong> Ordförråd och ordförståelse i kontext</li>
+                <li><strong>Uppgift 3:</strong> Förmåga att matcha frågor och svar</li>
+                <li><strong>Uppgift 4:</strong> Kommunikativ förståelse och avsiktsidentifikation</li>
+                <li><strong>Uppgift 5:</strong> Grammatisk förståelse och meningsbyggnad</li>
+                <li><strong>Uppgift 6:</strong> Kritisk läsning och ställningstagande</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h2>Användarinstruktioner</h2>
+            <p>
+                Alla uppgifter är <strong>självrättande</strong>. Du får omedelbar feedback när du submitterar dina svar. Rätt svar markeras med grönt, felaktiga svar med rött. Du kan se dina resultat för varje uppgift och få ett totalt resultat för hela provet när du är klar.
+            </p>
+            <p>
+                <strong>Navigering:</strong> Använd knapparna längst ned på varje uppgift för att gå till nästa eller föregående uppgift. Du kan när som helst gå tillbaka till denna startsida.
+            </p>
+            <p>
+                <strong>Tips:</strong> Läs artikeln noggrant före du löser uppgifterna. Ord kan ha olika betydelser i olika sammanhang.
+            </p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Skapad för SFI Kurs D</strong> | Läsförståelseuppgifter om miljö och hållbar utveckling</p>
+        </div>
+    </div>
+</body>
+</html>
